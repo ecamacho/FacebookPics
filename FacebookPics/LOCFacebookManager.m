@@ -27,13 +27,13 @@
 @synthesize delegate = _delegate;
 
 + (id)sharedInstance
-{
-  static LOCFacebookManager *instance = nil;
-  if (!instance) {
-    instance = [[[self class] alloc] init];
-
-  }
-  return instance;
+{  
+  static dispatch_once_t pred = 0;
+  __strong static id _instance = nil;
+  dispatch_once(&pred, ^{
+    _instance = [[self alloc] init]; 
+  });
+  return _instance;
 }
 
 - (id)init
