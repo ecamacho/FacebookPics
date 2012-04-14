@@ -48,6 +48,7 @@
 
 - (void)getContacts;
 
+- (void)loadTokenFromUserDefaults;
 
 @end
 

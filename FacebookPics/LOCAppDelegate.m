@@ -43,6 +43,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application 
 {
   LOCFacebookManager *facebookManager = [LOCFacebookManager sharedInstance];
+  [facebookManager loadTokenFromUserDefaults];
   [[facebookManager facebook] extendAccessTokenIfNeeded];
 }
 

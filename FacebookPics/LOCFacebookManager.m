@@ -41,7 +41,7 @@
   self = [super init];
   if (self) {
     self.facebook = [[Facebook alloc] initWithAppId:LOC_FB_APP_ID andDelegate:self];
-
+    [self loadTokenFromUserDefaults];
   }
   return self;
 }
@@ -54,8 +54,17 @@
     NSArray *facebookPermissions = [NSArray arrayWithObject:@"publish_stream"];
     [self.facebook authorize:facebookPermissions];
   }
-  
 }
+
+- (void)loadTokenFromUserDefaults
+{
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  if ([defaults objectForKey:@"FBAccessTokenKey"] && [defaults objectForKey:@"FBExpirationDateKey"]) {
+    self.facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+    self.facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+  }
+}
+
 
 - (void)logoutFromFacebook
 {
