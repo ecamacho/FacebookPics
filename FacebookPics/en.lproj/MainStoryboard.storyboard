@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="bGy-Z1-vXu">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - Welcome-->
+        <scene sceneID="5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <viewController id="2" customClass="LOCViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="concrete.jpg" id="dzw-vb-Hgw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UNI-N8-i5b">
+                                <rect key="frame" x="65" y="214" width="190" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="fb_button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginInFB:" destination="2" eventType="touchUpInside" id="PU8-s5-Mvv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="SjT-Vk-sKZ"/>
+                    <connections>
+                        <segue destination="6ZT-RY-8Ml" kind="push" identifier="takePicSegue" id="Kva-38-bIh"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="664" y="132"/>
+        </scene>
+        <!--Navigation Controller - Welcome!-->
+        <scene sceneID="uni-uM-roG">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wtk-qK-h6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController title="Welcome!" id="bGy-Z1-vXu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackTranslucent" id="1vf-Nl-ngC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="XRk-MB-mic"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="215" y="120"/>
+        </scene>
+        <!--Photo Taker View Controller - Take a pic-->
+        <scene sceneID="fBf-xL-0Rj">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fDI-iW-89E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Take a pic" id="6ZT-RY-8Ml" customClass="LOCPhotoTakerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="va9-Xa-OwZ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Blueprint.jpg" id="D1x-R8-IIM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WyE-BE-Z3E">
+                                <rect key="frame" x="105" y="403" width="110" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Take a pic" image="camera.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePic:" destination="6ZT-RY-8Ml" eventType="touchUpInside" id="BLS-4l-33D"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="QLG-na-cWW">
+                                <rect key="frame" x="7" y="99" width="306" height="296"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kyv-0I-Z1e">
+                                <rect key="frame" x="111" y="403" width="98" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postPic:" destination="6ZT-RY-8Ml" eventType="touchUpInside" id="546-X6-Lck"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="sx3-uy-9Ip">
+                                <rect key="frame" x="142" y="228" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="UKG-SO-oil">
+                                <rect key="frame" x="20" y="50" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bienvenido " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="aHl-7U-d09">
+                                <rect key="frame" x="75" y="59" width="209" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Take a pic" id="env-Cl-uOg">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="YmA-Ub-HD9">
+                            <connections>
+                                <action selector="logout:" destination="6ZT-RY-8Ml" id="MDC-Xl-t3k"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Contacts" id="4xm-2I-wfD">
+                            <connections>
+                                <segue destination="MLd-RH-EeI" kind="modal" id="4HL-x3-0G5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="avatarImageView" destination="UKG-SO-oil" id="ScN-aN-caX"/>
+                        <outlet property="imageView" destination="QLG-na-cWW" id="rl1-I9-rgQ"/>
+                        <outlet property="postButton" destination="Kyv-0I-Z1e" id="ovF-VA-VhC"/>
+                        <outlet property="spinner" destination="sx3-uy-9Ip" id="eZZ-Fr-fuX"/>
+                        <outlet property="takePicButton" destination="WyE-BE-Z3E" id="RiC-WF-eOh"/>
+                        <outlet property="welcomeLabel" destination="aHl-7U-d09" id="4No-PA-U1X"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="244" y="763"/>
+        </scene>
+        <!--Contacts View Controller-->
+        <scene sceneID="RMx-cZ-9E9">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLk-t5-Srf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="MLd-RH-EeI" customClass="LOCContactsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="33M-kN-F8z">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="f77-Xd-krw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Done" id="gee-8J-SNz">
+                                        <connections>
+                                            <action selector="close:" destination="MLd-RH-EeI" id="JA5-pH-XRv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="AuK-l2-LGx">
+                                <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="MLd-RH-EeI" id="mRC-bc-Jg4"/>
+                                    <outlet property="delegate" destination="MLd-RH-EeI" id="cE2-hc-Cob"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="dia-wl-b3n">
+                                <rect key="frame" x="0.0" y="212" width="320" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="spinner" destination="dia-wl-b3n" id="R2R-88-Z7y"/>
+                        <outlet property="tableView" destination="AuK-l2-LGx" id="ANW-CQ-E7f"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="613" y="765"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Blueprint.jpg" width="320" height="480"/>
+        <image name="camera.png" width="24" height="18"/>
+        <image name="concrete.jpg" width="320" height="480"/>
+        <image name="fb_button.png" width="190" height="31"/>
+    </resources>
+    <classes>
+        <class className="LOCContactsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LOCContactsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="close:"/>
+                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LOCPhotoTakerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LOCPhotoTakerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="logout:"/>
+                <relationship kind="action" name="postPic:"/>
+                <relationship kind="action" name="takePic:"/>
+                <relationship kind="outlet" name="avatarImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="postButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="takePicButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="welcomeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LOCViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LOCViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginInFB:"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
